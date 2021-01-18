@@ -46,6 +46,13 @@ body {
 
 }
 
+.fa-times-circle{
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 /* carrusel */
 .carousel-inner{
   border-radius: 10px;
@@ -227,7 +234,6 @@ div {
 }
 
 
-
 /* Media queries */
 
 @media only screen and (max-width: 991px) {
@@ -275,5 +281,4 @@ div {
   .precio {
       font-size: 20px
   }
-
 }

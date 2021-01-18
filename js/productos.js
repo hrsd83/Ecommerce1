@@ -21,13 +21,12 @@ const fetchData = async () =>{
 const pintarCards =  data => {
   data.forEach(producto => {
  
-    
-    mydiv.querySelector('.titulo_oferta').textContent = producto.titulo_oferta
-    mydiv.querySelector('img').setAttribute('src', producto.imagen)
-    mydiv.querySelector('.categoria').textContent = producto.categoria
-    mydiv.querySelector('.producto').textContent = producto.producto
-    mydiv.querySelector('.precio').textContent = producto.precio
-
+    mydiv.querySelector('.titulo_oferta').textContent = producto.titulo_oferta;
+    mydiv.querySelector('img').setAttribute('src', producto.imagen);
+    mydiv.querySelector('.categoria').textContent = producto.categoria;
+    mydiv.querySelector('.producto').textContent = producto.producto;
+    mydiv.querySelector('.precio').textContent = producto.precio;
+   
     const clone = mydiv.cloneNode(true)
     fragment.appendChild(clone);
     
