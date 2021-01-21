@@ -21,7 +21,7 @@
       id : producto.querySelector('a').getAttribute('data-id'),
       cantidad : 1,
     }
-    console.log(infProducto)
+  
     let productosLS;
     productosLS  = this.obtenerProductosLocalStorage();
     productosLS.forEach(function(productoLS){
@@ -30,9 +30,18 @@
       }
     });
     if(productosLS === infProducto.id){
-      // console.log('producto ya agregado')
+      Swal.fire({
+        icon: 'warning',
+        title:'info',
+        text:'El producto ya esta agregado a su carrito',
+        timer: 2000, 
+        showConfirmButton: false,
+      });
     }
-    this.insertarCarrito(infProducto);
+    else{
+      this.insertarCarrito(infProducto);
+    }
+    
    
   }
   // ingresar productos al carrito
@@ -126,8 +135,49 @@
       });
     }
 
+    leerLocalStorageCompra(){
+      let productosLS;
+      productoLS = this.obtenerProductosLocalStorage();
+      productosLS.forEach(function(producto){
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>
+          <img src= "${producto.imagen}" width = 100>
+        </td>
+        <td>${producto.titulo}</td>
+        <td>${producto.precio}</td>
+        <td>
+          input type="number" class="form-control cantidad" min ="1" value =${producto.cantidad}
+        </td>
+        <td>${producto.precio + producto.cantidad}</td>
+        <td>
+          <a href="#" class ="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+        </td>
+    `;
+      listaCompra.appendChild(row); 
+      });
+    }
+
     vaciarLocalStorage(){
       localStorage.clear();
+    }
+
+    procesarPedidos(e){
+      e.preventDefault();
+      if(this.obtenerProductosLocalStorage().length === 0){
+        Swal.fire({
+          icon: 'error',
+          title:'info',
+          text:'El Carrito esta vacio, agregar algun producto',
+          timer: 2500, 
+          showConfirmButton: false,
+        });
+      }
+      else{
+      location.href= 'compra.html';
+
+      }
+      
     }
 
 }
