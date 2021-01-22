@@ -9,15 +9,16 @@ const carro = new Carrito();
 cargarEventos();
 
 function cargarEventos(){
-  productos.addEventListener('click',(e)=>{carro.comprarProducto(e)})
 
-  carrito.addEventListener('click',(e) =>{carro.eliminarProducto(e)})
+  productos.addEventListener('click', (e)=>{carro.comprarProducto(e)})
 
-  vaciarCarritoBtn.addEventListener('click', (e) =>{carro.vaciarCarrito(e)});
+  carrito.addEventListener('click', (e)=>{carro.eliminarProducto(e)})
 
-  // document.addEventListener('DOMContentLoaded', carro.leerLocalStorage());
+  vaciarCarritoBtn.addEventListener('click', (e)=>{carro.vaciarCarrito(e)});
 
-  procesarPedidos.addEventListener('click', (e) =>{carro.procesarPedidos(e)});
+  document.addEventListener('DOMContentLoaded', carro.leerLocalStorage());
+ 
+  procesarPedidos.addEventListener('click', (e)=>{carro.procesarPedidos(e)});
 
 
 

@@ -6,14 +6,10 @@
     if(e.target.classList.contains('agregar-carrito')){
       const producto = e.target.parentElement.parentElement;
       this.leerDatosProductos(producto);
-      
-     
-      
     }
   }
 
   leerDatosProductos(producto){
-    
     const infProducto = {
       imagen : producto.querySelector('img').src,
       titulo : producto.querySelector('.producto').textContent,
@@ -64,12 +60,13 @@
     // Eliminar productos de carrito
     eliminarProducto(e){
       e.preventDefault();
-      let producto, productoId;
+      let producto, productoID;
       if(e.target.classList.contains('borrar-producto')){
           e.target.parentElement.parentElement.remove();
           producto = e.target.parentElement.parentElement;
-          productoId = producto.querySelector('a').getAttribute('data-id');
+          productoID  = producto.querySelector('a').getAttribute('data-id');
       }
+      this.eliminarProductoLocalStorage(productoID)
 
     }
     // Vaciar carrito de compras 
@@ -80,7 +77,7 @@
       }
       this.vaciarLocalStorage();
       return false;
-    }
+     }
 
     // Guardar en el local storage
     guardarProductosLocalStorage(producto){
@@ -108,7 +105,7 @@
       productosLS = this.obtenerProductosLocalStorage();
       productosLS.forEach(function(productoLS, index){
         if(productoLS.id === productoID){
-          productoLS.splice(index, 1);
+          productosLS.splice(index, 1);
         }
       });
 
@@ -118,18 +115,18 @@
 
     leerLocalStorage(){
       let productosLS;
-      productoLS = this.obtenerProductosLocalStorage();
+      productosLS = this.obtenerProductosLocalStorage();
       productosLS.forEach(function(producto){
         const row = document.createElement('tr');
         row.innerHTML = `
           <td>
-          <img src= "${producto.imagen}" width = 100>
-        </td>
-        <td>${producto.titulo}</td>
-        <td>${producto.precio}</td>
-        <td>
-          <a href="#" class ="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
-        </td>
+            <img src= "${producto.imagen}" width = 100>
+          </td>
+          <td>${producto.titulo}</td>
+          <td>${producto.precio}</td>
+          <td>
+            <a href="#" class ="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+          </td>
     `;
       listaProductos.appendChild(row); 
       });
