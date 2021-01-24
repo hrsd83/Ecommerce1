@@ -26,9 +26,15 @@ body {
   margin-left: 69px;
   width: 162px;
 }
-
+#carrito{
+  overflow:scroll;
+  height:200px;
+  width: 400px;
+  
+}
 .table{
-  width: 300px;
+  width: 380px;
+  
 }
 
 #img-carrito{
@@ -63,6 +69,7 @@ body {
 
 /* --------------------------------------------------------------- */
 /* CSS DEL MAIN */
+
 .title-lista-productos{
   width: 100px;
 }

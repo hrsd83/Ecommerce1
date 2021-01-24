@@ -1,4 +1,3 @@
-
 const items = document.getElementById('items')
 const mydiv = document.getElementById('mydiv').content
 const fragment = document.createDocumentFragment();
@@ -18,6 +17,8 @@ const fetchData = async () =>{
     
   }
 }
+
+
 
 
 const pintarCards =  data => {
