@@ -19,16 +19,16 @@ body {
   width: 72px;
 }
 #vaciar-carrito{
-  margin-left: 70px;
-  width: 160px;
+  /* margin-left: 70px; */
+  width: 100%;
 }
 #procesar-pedido{
-  margin-left: 69px;
-  width: 162px;
+  /* margin-left: 69px; */
+  width: 100%;
 }
 #carrito{
   overflow:scroll;
-  height:200px;
+  height: 150px;
   width: 400px;
   
 }
@@ -242,6 +242,13 @@ div {
 
 
 /* Media queries */
+
+@media only screen and (max-width: 680px) {
+  #carrito {
+      width: 100%;
+      
+  }
+}
 
 @media only screen and (max-width: 991px) {
   .bbb_deals {

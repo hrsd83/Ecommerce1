@@ -1,8 +1,9 @@
 const compra = new Carrito();
 const listaCompra = document.querySelector('#lista-compra tbody');
 
-cargarEventos()
+cargarEventos();
 function cargarEventos(){
 
-  document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra);
+  document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra());
 }
+

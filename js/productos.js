@@ -18,9 +18,6 @@ const fetchData = async () =>{
   }
 }
 
-
-
-
 const pintarCards =  data => {
   data.forEach(producto => {
     
@@ -32,8 +29,6 @@ const pintarCards =  data => {
     mydiv.querySelector('.precio').textContent = producto.precio;
     
     
-
-   
     const clone = mydiv.cloneNode(true)
     fragment.appendChild(clone);
     
