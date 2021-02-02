@@ -59,10 +59,11 @@ body {
 
 .dark{
   float: right;
+  
 }
 body.dark-mode {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
   a {
     color: black;
@@ -73,11 +74,11 @@ body.dark-mode {
   }
 
 body.light-mode {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
   a {
-    color: black;
+    color: white;
   }
   button {
     background-color: black;
