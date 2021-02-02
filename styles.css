@@ -18,14 +18,11 @@ body {
 .btn-outline-success{
   width: 72px;
 }
-#vaciar-carrito{
-  /* margin-left: 70px; */
-  width: 100%;
+#vaciar-carrito, #procesar-pedido{
+  width: 50%;
+  margin-left: 70px;
 }
-#procesar-pedido{
-  /* margin-left: 69px; */
-  width: 100%;
-}
+
 #carrito{
   overflow:scroll;
   height: 150px;
@@ -46,7 +43,7 @@ body {
 }
 
 #card:hover{
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 0px 5px 3px rgba(103, 128, 159, 1);
   cursor: pointer;
   border-radius: 12px;
 
@@ -58,13 +55,35 @@ body {
   cursor: pointer;
 }
 
+/* CSS MODE NOCTURNO  */
 
-/* carrusel */
-.carousel-inner{
-  border-radius: 10px;
- 
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.6);
+.dark{
+  float: right;
 }
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+  a {
+    color: black;
+  }
+  button {
+    background-color: white;
+    color: black;
+  }
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+  a {
+    color: black;
+  }
+  button {
+    background-color: black;
+    color: white;
+  }
+
 
 
 /* --------------------------------------------------------------- */
@@ -170,6 +189,7 @@ div {
 
 .bbb_deals {
   width: 100%;
+  background: white;
   margin-right: 7%;
   padding-top: 80px;
   padding-left: 25px;
@@ -242,13 +262,6 @@ div {
 
 
 /* Media queries */
-
-@media only screen and (max-width: 680px) {
-  #carrito {
-      width: 100%;
-      
-  }
-}
 
 @media only screen and (max-width: 991px) {
   .bbb_deals {
