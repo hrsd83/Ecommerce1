@@ -3,36 +3,135 @@ const mydiv = document.getElementById('mydiv').content
 const fragment = document.createDocumentFragment();
 
 document.addEventListener('DOMContentLoaded', () =>{
-  fetchData()
-  
+  pintarCards() 
 })
 
-const fetchData = async () =>{
-  try {
-    const res = await fetch('api.json')
-    const data = await res.json()
-    pintarCards(data)
+// Se crea la funtion con un FOR para pintar cada cards
+function pintarCards() {
+  for (let i = 0; i < serviTechProducts.length; i++) {
     
-  } catch (error) {
-    
-  }
-}
-
-const pintarCards =  data => {
-  data.forEach(producto => {
-    
-    mydiv.querySelector('.titulo_oferta').textContent = producto.titulo_oferta;
-    mydiv.querySelector('a').setAttribute('data-id', producto.id);
-    mydiv.querySelector('img').setAttribute('src', producto.imagen);
-    mydiv.querySelector('.categoria').textContent = producto.categoria;
-    mydiv.querySelector('.producto').textContent = producto.producto;
-    mydiv.querySelector('.precio').textContent = producto.precio;
-    
-    
+    mydiv.querySelector('.titulo_oferta').textContent = serviTechProducts[i].titulo_oferta;
+    mydiv.querySelector('a').setAttribute('data-id', serviTechProducts[i].id);
+    mydiv.querySelector('img').setAttribute('src', serviTechProducts[i].imagen);
+    mydiv.querySelector('.categoria').textContent = serviTechProducts[i].categoria;
+    mydiv.querySelector('.producto').textContent = serviTechProducts[i].producto;
+    mydiv.querySelector('.precio').textContent = serviTechProducts[i].precio;
     const clone = mydiv.cloneNode(true)
     fragment.appendChild(clone);
-    
-  });
-  items.appendChild(fragment)
- 
+  }
+  items.appendChild(fragment);
 }
+
+// Se crea la variable con el array de productos 
+const serviTechProducts = [
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "data-id": 1,
+    "imagen": "https://i.postimg.cc/sx4sFm1Z/pc-all-in-one-22-b208la-core-i3-7100u-4gb-1tb-windows-10-215-hp-3364-571.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Pc-all-in-one-22",
+    "precio":"100.000"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 2,
+    "imagen": "https://i.postimg.cc/Fsk2wmnX/apple-imac-30ghz-6c-core-i5-8gb-256gb-ssd-r-pro-560x-4g-4k-retina-215.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Apple-imac-30ghz",
+    "precio":"68.500"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 3,
+    "imagen": "https://i.postimg.cc/zf86LhDq/apple-imac-36ghz-qc-core-i3-8gb-256gb-ssd-radeon-pro-555x-2gb-retina-215.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Dell-aio-inspiron",
+    "precio":"89.500"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 4,
+    "imagen": "https://i.postimg.cc/kgxLXsmj/dell-aio-inspiron-5490-touch-core-i5-1021u-12gb-1tb-win10-home-238-3370-128.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":" Dell-aio-optiplex",
+    "precio":"110.500"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 5,
+    "imagen": "https://i.postimg.cc/Z5k1Sg1B/dell-aio-optiplex-7470-core-i7-9700-8gb-1tb-windows-10-profesional-238.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"HP-aio-24",
+    "precio":"25.550"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 6,
+    "imagen": "https://i.postimg.cc/prw1Ph1b/hp-aio-200-g4-22-pentium-j5040-4gb-1tb-win10-home-215-3364-713.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Lenovo-aio-ideacentre",
+    "precio":"25.550"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 7,
+    "imagen": "https://i.postimg.cc/kG6prFsv/hp-aio-22-dd0003la-core-i5-1035g1-4gb-1tb-win10-home-238.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Lenovo-ideacentre",
+    "precio":"80.000"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 8,
+    "imagen": "https://i.postimg.cc/MTGL58j4/hp-aio-22-dd0018la-ryzen-3-3250u-4gb-1tb-dvd-win10-home-215-3364-676.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"HP Notebook",
+    "precio":"85.000"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 9,
+    "imagen": "https://i.postimg.cc/tgkfFg7W/hp-aio-24-dp0007la-ryzen-5-3550h-8gb-1tb-256gb-ssd-win10-home-238.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Pc-all-in-one",
+    "precio":"120.000"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 10,
+    "imagen": "https://i.postimg.cc/50kRkkBt/lenovo-aio-ideacentre-a540-21icb-core-i7-700-8gb-1tb-windows-10-home-238.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Toshiba",
+    "precio":"86.000"
+  },
+  {
+    
+    "titulo_oferta":"Today's Best Offer",
+    "id": 11,
+    "imagen": "https://i.postimg.cc/sx4sFm1Z/pc-all-in-one-22-b208la-core-i3-7100u-4gb-1tb-windows-10-215-hp-3364-571.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"Pc-all-in-one",
+    "precio":"100.550"
+  },
+  {
+    "titulo_oferta":"Today's Best Offer",
+    "id": 12,
+    "imagen": "https://i.postimg.cc/668W6k1Y/lenovo-ideacentre-a340-22ast-aio-amd-a6-9225-4gb-1tb-win10-home-215.jpg",
+    "url": "https://postimg.cc/KRRYLNTV",
+    "categoria":"Escritorio",
+    "producto":"HP Notebook",
+    "precio":"90.550"
+  }
+]
+
