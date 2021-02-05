@@ -263,7 +263,7 @@ div {
 
 
 /* Media queries */
-
+/* 
 @media only screen and (max-width: 991px) {
   .bbb_deals {
       width: 100%;
@@ -286,27 +286,7 @@ div {
   }
   
 
-}
+} */
 
 
 
-@media only screen and (max-width: 575px) {
-  .bbb_deals {
-      padding-left: 15px;
-      padding-right: 15px
-  }
-
-  .titulo_oferta {
-      left: 15px;
-      font-size: 16px
-  }
-
-  .bbb_deals_slider_nav_container {
-      right: 5px
-  }
-
-  .producto,
-  .precio {
-      font-size: 20px
-  }
-}

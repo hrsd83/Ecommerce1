@@ -178,5 +178,22 @@ class Carrito{
       
     }
 
+    calcularTotal(){
+      let productoLS;
+      let total = 0, subtotal = 0, igv = 0;
+      productoLS = this.obtenerProductosLocalStorage();
+      for(let i = 0; i < productoLS.length; i++){
+        let element = Number(productoLS[i].precio * productoLS[i].cantidad);
+        total = total + element;
+      }
+      igv = parseFloat(total * 0.18);
+      subtotal = parseFloat(total-igv);
+
+      document.getElementById('subtotal').innerHTML = "S/." + subtotal;
+      document.getElementById('igv').innerHTML = "S/." + igv;
+      document.getElementById('total').innerHTML = "S/." + total;
+    }
+
 }
       
+
