@@ -68,6 +68,7 @@ class Carrito{
           productoID  = producto.querySelector('a').getAttribute('data-id');
       }
       this.eliminarProductoLocalStorage(productoID)
+      this.calcularTotal();
 
     }
     // Vaciar carrito de compras 

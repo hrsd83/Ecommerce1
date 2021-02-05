@@ -1,14 +1,21 @@
+#cargando{
+  display: none;
+}
+
+
+
+
+
+
 @media only screen and (min-width: 350px) {
   
   .btn-info{
     width: 100%;
-    background:#0779e4 ;
-    color: black;
+    
   }
   .btn-success{
     width: 100%;
-    background:#0779e4 ;
-    color: black;
+   
   }
  
 }
