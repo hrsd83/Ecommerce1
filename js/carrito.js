@@ -122,7 +122,7 @@ class Carrito{
         const row = document.createElement('tr');
         row.innerHTML = `
           <td>
-            <img src= "${producto.imagen}" width = 100>
+            <img src= "${producto.imagen}" width=100>
           </td>
           <td>${producto.titulo}</td>
           <td>${producto.precio}</td>
@@ -141,16 +141,16 @@ class Carrito{
         const row = document.createElement('tr'); 
         row.innerHTML = `
           <td>
-            <img src= "${producto.imagen}" width = 100>
+              <img src= "${producto.imagen}" width=80>
           </td>
           <td>${producto.titulo}</td>
           <td>${producto.precio}</td>
           <td>
-            <input type="number" class="form-control cantidad" min ="1" value =${producto.cantidad}>
+              <input type="number" class="form-control cantidad" min ="1" value =${producto.cantidad}>
           </td>
-          <td>${producto.precio * producto.cantidad}</td>
+          <td>${producto.precio}</td>
           <td>
-            <a href="#" class ="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
+              <a href="#" class="borrar-producto fas fa-times-circle" style= "text-decoration: none" data-id="${producto.id}"></a>
           </td>
     `;
       listaCompra.appendChild(row); 
@@ -187,12 +187,12 @@ class Carrito{
         let element = Number(productoLS[i].precio * productoLS[i].cantidad);
         total = total + element;
       }
-      igv = parseFloat(total * 0.18);
-      subtotal = parseFloat(total-igv);
+      igv = parseFloat(total * 0.18).toFixed(3);
+      subtotal = parseFloat(total-igv).toFixed(3);
 
-      document.getElementById('subtotal').innerHTML = "S/." + subtotal;
-      document.getElementById('igv').innerHTML = "S/." + igv;
-      document.getElementById('total').innerHTML = "S/." + total;
+      document.getElementById('subtotal').innerHTML = "$" + subtotal;
+      document.getElementById('igv').innerHTML = "$" + igv;
+      document.getElementById('total').innerHTML = "$" + total.toFixed(3);
     }
 
 }

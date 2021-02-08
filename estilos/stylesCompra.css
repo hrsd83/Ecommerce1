@@ -1,7 +1,25 @@
-#cargando{
-  display: none;
+body{
+  background-color: #212529!important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#logo1{
+  width: 400px;
+}
+.table{
+  background: #d1e9ea;
+  border-radius: 5px;
+}
+
+#cliente, #correo {
+  color: white;
+  font-size: 22px;
+}
+
+#cargando{
+  display: none;
+  
+}
 
 @media only screen and (min-width: 350px) {
   

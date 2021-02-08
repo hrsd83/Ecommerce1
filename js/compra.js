@@ -40,18 +40,18 @@ function procesarCompra(e){
     })
   }
   else{
-      const cargarGif = document.querySelector('#cargando')
+      const cargarGif = document.querySelector('#cargando');
       cargarGif.style.display = 'block';
       cargarGif.style.width = '250px';
 
       const enviado = document.createElement('img');
       enviado.src = 'img/enviado.gif';
       enviado.style.display = 'block';
-      enviado.style.width = '150px'
+      enviado.style.width = '150px';
 
       setTimeout(() => {
         cargarGif.style.display = 'none';
-        document.querySelector('#loaders').appendChild(enviado)	
+        document.querySelector('#loaders').appendChild(enviado);
         setTimeout(() => {
           enviado.remove();
           compra.vaciarLocalStorage();

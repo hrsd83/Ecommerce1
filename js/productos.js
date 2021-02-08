@@ -31,7 +31,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Pc-all-in-one-22",
-    "precio":"100.000"
+    "precio":"150.000"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -40,7 +40,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Apple-imac-30ghz",
-    "precio":"68.500"
+    "precio":"89.500"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -49,7 +49,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Dell-aio-inspiron",
-    "precio":"89.500"
+    "precio":"130.500"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -58,7 +58,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":" Dell-aio-optiplex",
-    "precio":"110.500"
+    "precio":"160.500"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -67,7 +67,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"HP-aio-24",
-    "precio":"25.550"
+    "precio":"125.550"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -76,7 +76,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Lenovo-aio-ideacentre",
-    "precio":"25.550"
+    "precio":"180.000"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -85,7 +85,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Lenovo-ideacentre",
-    "precio":"80.000"
+    "precio":"130.000"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -94,7 +94,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"HP Notebook",
-    "precio":"85.000"
+    "precio":"110.000"
   },
   {
     "titulo_oferta":"Today's Best Offer",
@@ -112,7 +112,7 @@ const serviTechProducts = [
     "url": "https://postimg.cc/KRRYLNTV",
     "categoria":"Escritorio",
     "producto":"Toshiba",
-    "precio":"86.000"
+    "precio":"95.000"
   },
   {
     
