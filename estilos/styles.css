@@ -64,25 +64,25 @@ body {
 }
 body.dark-mode {
   background-color: white;
-  color: black;
+  color: #212529 !important;
 }
   a {
-    color: black;
+    color: #212529 !important;
   }
   button {
     background-color: white;
-    color: black;
+    color: #212529 !important;
   }
 
 body.light-mode {
-  background-color: black;
+  background-color: #212529 !important;
   color: white;
 }
   a {
     color: white;
   }
   button {
-    background-color: black;
+    background-color: #212529 !important;
     color: white;
   }
 
