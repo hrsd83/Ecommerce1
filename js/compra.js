@@ -30,7 +30,7 @@ function procesarCompra(e){
         window.location = 'index.html';
     })
   }
-  else if(cliente.value === '' || correo.value === ''){
+  else if(cliente.value === '' || correo.value === '' || numero.value === ''){
     Swal.fire({
       icon: 'error',
       title:'Oops...',

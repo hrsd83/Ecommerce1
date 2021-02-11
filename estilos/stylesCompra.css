@@ -2,7 +2,7 @@ body{
   background-color: #212529!important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 #logo1{
@@ -13,9 +13,9 @@ body{
   border-radius: 5px;
 }
 
-#cliente, #correo {
+#cliente, #correo, #numero {
  
-  font-size: 22px;
+  font-size: 18px;
 }
 
 #cargando{
@@ -32,6 +32,13 @@ body{
   .btn-success{
     width: 100%;
    
+  }
+ 
+}
+
+@media only screen and (min-width: 768px) {
+  .container-lista .table{
+    
   }
  
 }

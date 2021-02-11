@@ -24,3 +24,6 @@ function moverCarrito() {
 }
 setInterval(moverCarrito, 1000);
 
+
+
+
